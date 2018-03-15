@@ -12,8 +12,11 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 
 api = tweepy.API(auth)
 
+i = 0
+
 while True:
-    api.update_status("Anime was a mistake")
+    api.update_status("Anime was a mistake " + str(i))
     print("Tweeting!")
+    i = i + 1
     time.sleep(90) #Tweet every 2 minutes
     print("All done tweeting!")
